@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/ed258397fc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/2.png" alt="logo" class="logo">
+                <ul class="sidemenu">
+                    <li><a href="#"> Home</a></li>
+                    <li><a href="#about"> About</a></li>
+                    <li><a href="#services"> Services</a></li>
+                    <li><a href="#portfolio"> Portfolio</a></li>
+                    <li><a href="#contact"> Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closeThis()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" id="opening" onclick="openThis()"></i>
+            </nav>
+            <div class="header-text">
+                <p>NinjaHacker Designer</p>
+                <h1>Hi, I'm <span>Rowell</span> The Ninja <span id="hacker"> Hacker</span></h1>
+            </div>
+        </div>
+    </div>
+    
+        <!---------------------- ABout---------------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/zoro1.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Zoro</h1>
+                    <p>Roronoa Zoro, also known as "Pirate Hunter" Zoro, is the combatant of the Straw Hat Pirates, one of their two swordsmen, one of the Senior Officers of the Straw Hat Grand Fleet, and is publicly recognized as the right-hand man of his crew's captain Monkey D. Luffy. Formerly a bounty hunter, he is the second member of Luffy's crew and the first to join it, doing so in the Romance Dawn Arc.</p>
+                    <div class="tab-tittles">
+                        <p class="tab-links active-link" onclick="openTab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('Moto')">Moto</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Santoryu Ougi, Sanzen Sekai</span></li>
+                            <li><span>Nanahyakuniju Pound Ho</span></li>
+                            <li><span>Santoryu Ougi: Rokudo no Tsuji</span></li>
+                            <li><span>Kiki Kyuutoryu: Asura</span></li>
+                            <li><span>Santoryu Ougi: Rengoku Onigiri</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Battled With Mihawk</span></li>
+                            <li><span>Batlled With Kaido</span></li>
+                            <li><span>Good at Direction</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Moto">
+                        <ul>
+                            <li><span>“In a real fight there is no man or woman!</span></li>
+                            <li><span>“In case we become candles, I want to have a nice pose”</span></li>
+                            <li><span>“My captain has no business with a chunk of stone like you</span></li>
+                            <li><span>“I'm sorry</span></li>
+                            <li><span>You need Direction or something ?</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                <!---------------------- Services---------------------->
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">Straw Hat Monster Trio</h1>
+                <div class="services-list">
+                    <div class="wrap">
+                        <i class="fa-solid fa-hat-cowboy"></i>
+                        <h2>Monkey D. Luffy</h2>
+                        <p>Monkey D. Luffy, also known as "Straw Hat Luffy" and commonly as "Straw Hat", is the main protagonist of the manga and anime, One Piece. He is the founder and captain of the increasingly infamous and powerful Straw Hat Pirates. He wanted to be the king of pirates.</p>
+                            <a href="#" id="learnMore">Learn more</a>
+                    </div>
+                    <div class="wrap">
+                        <i class="fa-solid fa-compass"></i>
+                        <h2>Roronoa Zoro</h2>
+                        <p>Roronoa Zoro, also known as "Pirate Hunter" Zoro. Zoro is very good at direction Thanks to him The crew wont get loss, Except for him-.. He is also the combatant of the Straw Hat Pirates, one of their two swordsmen, one of the Senior Officers of the Straw Hat Grand Fleet.</p>
+                            <a href="#" id="learnMore">Learn more</a>
+                    </div>
+                    <div class="wrap">
+                        <i class="fa-solid fa-smoking"></i>
+                        <h2>Black Leg Sanji</h2>
+                        <p>"Black Leg" Sanji, born as Vinsmoke Sanji, is the cook of the Straw Hat Pirates and one of the Senior Officers of the Straw Hat Grand Fleet.He is the fifth member of the crew and the fourth to join, doing so at the end of the Baratie Arc.Sanji respect women, and will do anything.</p>
+                            <a href="#" id="learnMore">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------PortFolio------------- -->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">Image Gallery</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/one1.png" alt="onepiece">
+                        <div class="layer">
+                            <h3>Don't Read This</h3>
+                            <p id="small">Hellow there nice meeting you my name is afoldoryysnsdjheuwolokiollingding now why the hell did you skip my name ?</p>
+                            <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/one2.png" alt="onepiece">
+                        <div class="layer">
+                            <h3>Just a random content</h3>
+                            <p id="small">Hellow there nice meeting you my name is afoldoryysnsdjheuwolokiollingding now why the hell did you skip my name ?</p>
+                            <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/one3.png" alt="onepiece">
+                        <div class="layer">
+                            <h3>Onepiece is the goat</h3>
+                            <p id="small">Hellow there nice meeting you my name is afoldoryysnsdjheuwolokiollingding now why the hell did you skip my name ?</p>
+                            <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">See more</a>
+            </div>
+        </div>
+        <!-- -----------------Contact------------------- -->
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="sub-title">Contact Me</h1>
+                            <p><i class="fa-sharp fa-solid fa-paper-plane"></i> rodriguez.rowelljay@gmail.com</p>
+                            <p><i class="fa-solid fa-phone"></i> 09505661183</p>
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/rowelljay.rodriguez" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://i.ytimg.com/vi/4lutjT2vZsI/sddefault.jpg" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="https://i.ytimg.com/vi/4lutjT2vZsI/sddefault.jpg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://i.ytimg.com/vi/4lutjT2vZsI/sddefault.jpg" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-right">
+                            <form name="submit-to-google-sheet">
+                                <input type="text" name="Name" placeholder="Enter Your Name" required>
+                                <input type="email" name="Email" placeholder="Enter Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                            <span id="msg"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>Copyright &copy | Created By: Dling</p>
+                </div>
+            </div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwhlmSNseZ2j98iBOmRhlOdjb2LH1ivc2kANe8QCNrQMdykum0nv950HkaiweSqEiYBXg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+    
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully";
+            setTimeout(function() {
+                msg.innerHTML = "";
+            }, 5000)
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+    </script>
+</body>
+</html>

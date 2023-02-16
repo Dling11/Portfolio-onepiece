@@ -1,0 +1,443 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+/*scroll-behavior is such a nice feature */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #080808;
+    color: #fff;
+}
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/1.png);
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    padding: 10px 10%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo {
+    width: 200px;
+}
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+/* The meaning of content is before the element,  */
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+/* It's very important to know that the width of ::after is set to = 0; ... for that we cn put transitionm, if hover width will 100%*/
+nav ul li a:hover::after {
+    width: 100%;
+}
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    margin-right: 30rem;
+}
+.header-text h1 span {
+    color: rgb(230, 40, 59);
+}
+.header-text h1 span#hacker {
+    color: white;
+    position: relative;
+    right: 0;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+.header-text h1 span#hacker:hover {
+    color: white;
+    position: absolute;
+    right: 500px;
+}
+/* ============> About <============ */
+#about {
+padding: 80px 0;
+color: #ababaa;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 {
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 20px;
+}
+.about-col-1 img:hover{
+    border: none;
+    box-shadow: 1px 1px 90px 8px rgb(147, 147, 147);
+    transition: 10s ease-out;
+    cursor: pointer;
+
+}
+
+/* Flex-basis is similar to grid.. The way I understand it is that the 1st column is set to 35 and 2nd-col is set to 60 */
+.about-col-2 {
+    flex-basis: 60%;
+}
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.tab-tittles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(230, 40, 59);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after {
+    width: 50%;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span {
+    color: white;
+    font-size: 16px;
+}
+.tab-contents ul li span:hover {
+    color: rgb(230, 40, 59);
+    cursor: pointer;
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab {
+    display: block;
+}
+/* -------------Services------------ */
+#services {
+    padding: 30px 0;
+}
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+.services-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+/* The transition: background is quite cool, to review - background will be reverting slowly to it's form if it's hovered or touch*/
+
+/* Also at the bottom, that has comment is the resposible of hovering */
+
+/* .services-list div:hover {
+    background-color: rgb(155, 46, 57);
+    transform: translateY(-10px);
+} */
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover {
+    background-color: rgb(155, 46, 57);
+    transform: translateY(-10px);
+}
+
+/* -----------Portfolio----------- */
+#portfolio {
+    padding: 50px 0;
+}
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+/* Another cool new feature, eerytime it's hover it will zoom in, .work img => trasition: transform 0.5s => followed by.. =>work img:hover {
+    transform: scale(1.1);
+} */
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), rgb(155, 46, 57));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a {
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work img:hover  {
+    transform: scale(1.1);
+}
+.work:hover .layer {
+    height: 100%;
+}
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+.btn:hover {
+    background: #ff004f;
+}
+/* ---------------Contact-------------- */
+.contact-left {
+    flex-basis: 35%;
+}
+.contact-right {
+    flex-basis: 60%;
+}
+.contact-left p {
+    margin-top: 30px;
+}
+.contact-left p i {
+    color: rgb(186, 43, 57);
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons {
+    margin-top: 30px;
+}
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 10px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover {
+    color:rgb(186, 43, 57);
+    transform: translateY(-5px);
+}
+.btn.btn2 {
+    background-color: #ff004f;
+    display: inline-block;
+}
+.contact-right form {
+    width: 100%;
+}
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    resize: none;
+    overflow: hidden;
+}
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+form .btn2:hover {
+    transform: scale(1.1);
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background-color: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+/* ------------ media css -------------- */
+nav .fa-solid {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    /* To review #header is the code earlier, if 600px is meet automatically executed this code */
+    /* Also I realize that editing the previous code is much more recommeded */
+    #header {
+        background-image: url(images/one5.png);
+    }
+    .header-text{
+        margin-top: 200px;
+        font-size: 20px;
+    }
+    .header-text h1{
+        font-size: 45px;
+        margin-right: 9rem;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 30px;
+    }
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: 0;  
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    /* I can't figure at the transition */
+
+    nav .sidemenu {
+        display: none;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+    nav ul.active {
+        display: block;
+    }
+    nav ul.remove {
+        display: none;
+    }
+    .sub-title {
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+    .about-col-1 {
+        margin-top: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    button.btn.btn2 {
+        margin-left: 3.4rem;
+    }
+    .copyright {
+        font-size: 14px;
+    }
+}
+#msg {
+    color: #61b752;
+    margin-top: -30px;
+    display: block;
+}
